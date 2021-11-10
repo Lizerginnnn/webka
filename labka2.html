@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<title> Lizergin blog </title>
+        <style>
+        body {
+            background-color:rgb(178, 102, 248);
+            width: 100%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .headFoot {
+            display: flex; 
+            justify-content: space-between;
+            align-items: stretch;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .creator {
+            width: 100%;
+            display: flex; 
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-left: 0 px;
+            margin-right: 0 px;
+            background: #00e1ff49;
+        }
+        .textblock {
+            display: block;
+            flex-direction: column;
+            margin: 10px;
+            padding: 10px;
+            background: #75efff;
+        }
+        p.text1{
+            text-indent: 1em;
+            font-size: 2em;
+            color: white;
+            font-family: DejaVu Sans Mono, monospace;
+        }
+        .text1 {
+            display: block;
+            flex-direction: column;
+            margin: 10px;
+            padding: 0px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .middle-side {
+            float: left;
+            width: 70%;
+            height: 100%;
+        }
+        .right-side {
+            float: right;
+            width: 30%;
+            height: 100%;
+        }
+        .up {
+            background: #cc63f5b0;
+            width: 100%;
+        }
+        .down {
+            background: #cc63f5b0;
+            width: 100%;
+        }
+        .headFoot {
+            display: flex; 
+            justify-content: space-around;
+            align-items: stretch;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        p.up-down {
+            font-size: 1.2em;
+            color: #660099;
+            font-family: DejaVu Sans Mono, monospace;
+        }
+        .textblock {
+            display: block;
+            flex-direction: column;
+            margin: 10px;
+            padding: 10px;
+            background: #76f6ff46;
+        }
+        p.textblock {
+            font-size: 2em;
+            color: rgb(0, 0, 0);
+            font-family: DejaVu Sans Mono, monospace;
+        }
+        p.text {
+            font-size: 1.3em;
+            color: white;
+            font-family: DejaVu Sans Mono, monospace;
+        }
+        .avatar {
+            border-radius: 100%;
+            width: 95%;
+        }
+        .first-column {
+            float: left;
+            width: 10%;
+            height: 100%;
+        }
+        .second-column {
+            float: left;
+            width: 90%;
+            height: 100%;
+        }
+        .likes {
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            align-items: stretch;
+        }
+        .box {
+            flex-grow: 1;
+        }
+        .box1 {
+            flex-grow: 6;
+            margin-top: -20px;
+        }
+        .d18 {
+            position: relative;
+            width: 33px; 
+            height: 26px;
+        }
+        .d18:before, .d18:after {
+            content: "";
+            position: absolute; 
+            left: 16px; 
+            top: 0;
+            width: 16px; 
+            height: 26px;
+            background: white;
+            border-radius: 16px 16px 0 0;
+            transform: rotate(-45deg); 
+            transform-origin: 0 100%;
+        }
+        .d18:after {
+            left: 0;
+            transform: rotate(45deg); 
+            transform-origin: 100% 100%;
+        }
+        .arrow {
+            height: 24px;
+            position: relative;
+            width: 4.8px;
+            display: inline-block;
+            margin-top: 4px;
+            background-color: white;
+        }   
+        .arrow:before  {
+            content: " ";
+            width: 4.8px;
+            background-color: white;
+            height: 16.8px;
+            position: absolute;
+            top: -4.8px;
+            transform: rotate(50deg);
+            left: -4.8px;
+        }
+        .arrow:after {
+            content: " ";
+            width: 4.8px;
+            background-color: rgb(255, 174, 0);
+            height: 16.8px;
+            position: absolute;
+            top: -4.8px;
+            transform: rotate(-50deg);
+            right: -4.8px;
+        }
+        .half-right {
+            transform: rotate(45deg);
+        }
+        .d33 {
+            width: 36px; 
+            height: 19.2px; 
+            margin-left: 6.24px;
+            background: #ffffff;
+            position: relative;
+            border-radius: 2.4px;
+            margin-top: -10px;
+        }
+        .d33:before {
+            content: "";
+            width: 0; 
+            height: 0;
+            position: absolute; 
+            right: 100%; 
+            top: calc(50% - 2.88px);
+            border-top: 2.88px solid transparent;
+            border-right: 5.76px solid #ffffff;
+            border-bottom: 2.88px solid transparent;
+        }
+        .ads {
+            display: block;
+            flex-direction: column;
+            width: 90%;
+            background: #8a57bd;
+            margin: 0px;
+            padding: 10px;
+        }
+        p.ads {
+            font-size: 1.2em;
+            color: azure;
+            text-decoration: underline;
+            font-family: DejaVu Sans Mono, monospace;
+        }
+        .ads-photo{
+            width: 100%;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="up">
+            <div class="headFoot">
+                <b><p class="up-down" style="background-color: blueviolet; color: cornsilk;">МОЙ ПРОФИЛЬ</p></b><hr>
+                <b><p class="up-down" style="background-color: blueviolet; color: cornsilk;">ГЛАВНАЯ</p></b><hr>
+                <b><p class="up-down" style="background-color: blueviolet; color: cornsilk;">НОВОЕ</p></b><hr>
+                <b><p class="up-down" style="background-color: blueviolet; color: cornsilk;"> &#128270 ПОИСК</p></b>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="middle-side">
+                <div class="creator">
+                    <b><p class="text1"> by @Lizerginnnn &#128156 </p></b>
+                </div>
+         <div class="textblock">
+                <div class="row">
+                    <div class="first-column">
+                        <img src="https://uprostim.com/wp-content/uploads/2021/02/image183-1-1-720x720.jpg" class="avatar"/>
+                    </div>
+                    <div class="second-column">
+                        <b><p class="textblock">@Lally_Lally</p></b>
+                        <hr>
+                        <p class="text" align="justify">МЕМ</p>
+                        <hr>
+                        <div class="likes">
+                            <div class="box"><div class="d18"></div></div>
+                            <div class="box"><div class="arrow half-right"> </div></div>
+                            <div class="box"><p><div class="d33"></div></p></div>
+                            <div class="box1"><p class="text" align="right">14/05/2020</p></div>
+                        </div>
+                    </div>
+                </div>
+        </div>  
+        
+        <div class="textblock">
+            <div class="row">
+                <div class="first-column">
+                    <img src="https://avatars.mds.yandex.net/get-zen_doc/3683451/pub_5efb3ff066fe1d5006536937_5efb4cb267cc5e13be1840cc/scale_1200" class="avatar"/>
+                </div>
+                <div class="second-column">
+                    <b><p class="textblock">@lustra_v_kapyshon4ike</p></b>
+                    <hr>
+                    <table id="table1">
+                        <tr><img src="https://sun9-54.userapi.com/impg/M6kuAfmFPgSPwbswhv0J-GxWakPb4wMGYAYzHg/teOhdk4jAHE.jpg?size=1242x1172&quality=96&sign=1438aeb821adf05314e99a43cb2884e8&type=album" width="40%"/></tr>
+                    </table>
+                    <hr>
+                    <div class="likes">
+                        <div class="box"><div class="d18"></div></div>
+                        <div class="box"><div class="arrow half-right"> </div></div>
+                        <div class="box"><p><div class="d33"></div></p></div>
+                        <div class="box1"><p class="text" align="right">24/05/2020</p></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>      
+    <div class="textblock">
+            <div class="row">
+                <div class="first-column">
+                    <img src="https://www.meme-arsenal.com/memes/1efac1682fe7cd741f2eec8954279cfc.jpg" class="avatar"/>
+                </div>
+                <div class="second-column">
+                    <b><p class="textblock">@Я_настоящий_гуль_все_остальные_фейки</p></b>
+                    <hr>
+                    <p class="text" align="justify">прости, малышка, со мной будет сложно, ведь я dead inside</p>
+                    <hr>
+                    <div class="likes">
+                        <div class="box"><div class="d18"></div></div>
+                        <div class="box"><div class="arrow half-right"> </div></div>
+                        <div class="box"><p><div class="d33"></div></p></div>
+                        <div class="box1"><p class="text" align="right">17/04/2021</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
